@@ -22,16 +22,31 @@
     width: 100%;
     display: flex;
     gap: 2em;
+    align-items: center;
 
 
 }
 
+.product-image {
+    width: 30%;
+    min-width: 200px;
+    max-width: 400px;
+
+}
 
 .product-image > img{
-    width:240px;
-    height: 150px;
+   width: 100%;
     border-radius: 1em;
     object-fit: cover;
+}
+
+
+.product-info{
+    width: 100%
+}
+
+.product-edit{
+    width: 15%
 }
 
 

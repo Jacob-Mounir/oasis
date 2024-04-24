@@ -4,7 +4,7 @@ import { useStore } from '../../data/store.js'
 
 const EditProduct = ({ product, whenEditDone }) => {
 	const [disableButton, setDisableButton] = useState(false)
-	
+
 	const setProducts = useStore(state => state.setProducts)
 	const [title, setTitle] = useState(product.title)
 	const [price, setPrice] = useState(product.price)
@@ -32,11 +32,12 @@ const EditProduct = ({ product, whenEditDone }) => {
 
 			<form >
 
-				<input type="text"
-						value={imageURL}
+					<input type="text"
+						value={price}
 						className="bubble"
-						onChange={e => setImageURL(e.target.value)}
+						onChange={e => setPrice(e.target.value)}
 					/>
+
 
 				<input type="text"
 					value={title}
@@ -51,10 +52,11 @@ const EditProduct = ({ product, whenEditDone }) => {
 					/>
 
 					<input type="text"
-						value={price}
+						value={imageURL}
 						className="bubble"
-						onChange={e => setPrice(e.target.value)}
+						onChange={e => setImageURL(e.target.value)}
 					/>
+
 
 			</form>
 

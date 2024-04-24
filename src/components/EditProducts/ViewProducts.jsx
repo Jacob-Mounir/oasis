@@ -39,9 +39,9 @@ const ViewProducts = ({ product }) => {
 					</div>
 
 					<div className="product-info">
+						<h3>${product.price}</h3>
 						<h1>{product.title}</h1>
 						<p>{product.desc}</p>
-						<h3>${product.price}</h3>
 					</div>
 
 

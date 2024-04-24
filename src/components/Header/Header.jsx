@@ -10,22 +10,21 @@ function Header() {
 
 		<header className='header' id="top">
 
-			<div></div>
+		<div></div>
+
 
 			<div className='logo'>
 			<NavLink to="/"><img src={logo} /></NavLink>
 			</div>
 
-			<nav>
-				<ul>
-					<li>
-						<NavLink to="/">Login</NavLink>
-					</li>
-				</ul>
-			</nav>
 
 
+			<div className='splash-menu'>
+				<p>menu</p>
+			</div>
 
+
+			<div></div>
 
 		</header>
 
