@@ -1,0 +1,33 @@
+header{
+	width:100%; height: 13vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+
+.logo * {
+	max-width: 200px;
+	max-height: 200px;
+
+}
+
+
+nav * {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+
+}
+
+@media (max-width: 563px) {
+	.logo * {
+		max-width: 190px;
+		max-height: 190px;
+
+	}
+    header {
+		justify-content: center;
+	}
+}

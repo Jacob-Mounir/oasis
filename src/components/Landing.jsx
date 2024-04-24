@@ -1,13 +1,14 @@
 // import { useState } from 'react'
-import AddProduct from './AddProduct.jsx'
-import Products from './Products.jsx'
+import AddProduct from './EditProducts/AddProduct'
+import Products from './EditProducts/Products'
+import Header from './Header/Header.jsx'
 
 function App() {
 
 
 	return (
 		<div>
-			<h1> Oasis </h1>
+			<Header />
 			<AddProduct />
 			<Products />
 		</div>

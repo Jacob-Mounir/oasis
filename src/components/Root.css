@@ -11,6 +11,7 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 1em;
+
 }
 
 .row {
@@ -23,59 +24,4 @@
 .border-bottom {
 	border-bottom: 1px dotted darkgray;
 }
-.alternate:nth-child(even) {
-	background-color: rgb(244, 201, 208);
-}
 
-.change-Info{
-    background-color: aliceblue;
-    border: 1px solid black;
-    display: flex;
-    place-items: center;
-    color:black;
-    /* position: fixed; */
-    /* left: 30%; */
-    /* top: 25%; */
-    /* width: 40%; */
-    height: auto;
-    /* flex-direction: column; */
-	flex-grow: 1;
-	display: flex;
-	gap: 0.65em;
-}
-
-.name-change,
-.occ-change {
-	flex-grow: 1;
-    display:flex;
-    flex-direction: column;
-}
-.occ-change{
-    /* margin-bottom:1em; */
-}
-
-.name-change label,
-.occ-change label{
-    /* margin-bottom: 5px; */
-}
-/*
-<section className="editForm">
-<form>
-	<input type='text' placeholder={employee.name} />
-	<input type='text' placeholder={employee.occupation} />
-</form>
-</section>
-
-{showForm && (
-	<section className="change-Info">
-	  <section className="name-change">
-		<label>Name</label>
-		<input type="text" />
-	  </section>
-	  <section className="occ-change">
-		<label>Occupation</label>
-		<input type="text" />
-	  </section>
-	</section>
-  )}
-  */

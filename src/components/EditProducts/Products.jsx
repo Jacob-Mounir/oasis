@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getProducts } from '../data/crud.js';
-import { useStore } from '../data/store.js';
+import { getProducts } from '../../data/crud.js';
+import { useStore } from '../../data/store.js';
 import ViewProducts from './ViewProducts.jsx';
 
 const Products = () => {

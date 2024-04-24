@@ -1,5 +1,5 @@
-import { deleteProduct, getProducts } from "../data/crud.js"
-import { useStore } from '../data/store.js'
+import { deleteProduct, getProducts } from "../../data/crud.js"
+import { useStore } from '../../data/store.js'
 import { useState } from 'react'
 import EditProduct from './EditProduct.jsx'
 
@@ -31,9 +31,27 @@ const ViewProducts = ({ product }) => {
 					whenEditDone={() => setIsEditing(false)} />
 			) : (
 				<>
-				<div className="flex-grow"> {product.name} works as {product.occupation}. </div>
-				<button onClick={() => setIsEditing(true)}> 🖊️ </button>
-				<button disabled={isLoading} onClick={handleFire}> Fire </button>
+
+				<div className="product-item">
+
+					<div className="product-image">
+						<img src={product.imageURL}/>
+					</div>
+
+					<div className="product-info">
+						<h1>{product.title}</h1>
+						<p>{product.desc}</p>
+						<h3>${product.price}</h3>
+					</div>
+
+
+					<div className="edit-buttons">
+						<button onClick={() => setIsEditing(true)}> Edit </button>
+						<button disabled={isLoading} onClick={handleFire}> Delete </button>
+					</div>
+
+				</div>
+
 				</>
 			)}
 		</section>
