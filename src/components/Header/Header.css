@@ -12,11 +12,13 @@ header{
 	left: 70%;
 	width: 30%;
 	height: 30%;
+	z-index: 1000;
 	background-color: aquamarine;
 	clip-path: circle(50% at 100% 0);
 	transition: all 0.8s ease;
 	position: absolute;
 	color: white;
+
 }
 
 .splash-menu:hover{
@@ -27,6 +29,37 @@ header{
 	width: 100%;
 }
 
+.splash-menu > *{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.link-container  {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.link-container > a {
+	color: #f1f1f1;
+	font-size: 2em;
+
+	font-weight: 500;
+	text-decoration: none;
+
+}
+
+.link-container > img {
+	width: 100px;
+	height: 100px;
+
+
+}
 
 
 .logo * {

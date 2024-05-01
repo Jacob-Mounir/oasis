@@ -5,24 +5,25 @@ import { db } from './fire.js'
 const collectionName = 'products'
 const collectionRef = collection(db, collectionName)
 
-
 async function getProducts() {
-	// Skapa en referens till collection "products" i databasen
-	const productCollection = collection(db, collectionName)
+	const productCollection = collection(db, collectionName);
+	const productSnapshot = await getDocs(productCollection);
+	console.log('getProducts: snapshot is', productSnapshot);
 
-	// Hämta alla dokument i collection "products"
-	const productSnapshot = await getDocs(productCollection)
-	console.log('getProducts: snapshot is', productSnapshot)
+	const productList = productSnapshot.docs.map(doc => {
+		let product = doc.data();
+		product.id = doc.id;  // Now using "id" which is the Firestore document ID
+		return product;
+	});
 
-
-	const productList = productSnapshot.docs.map(doc => withKey(doc))
-	return productList
+	return productList;
 }
+
 
 // Use this ivf you don't have an id in the objects themselves
 function withKey(doc) {
 	let o = doc.data()
-	o.key = doc.id  // "id" is the document reference
+	o.id = doc.id  // "id" is the document reference
 	return o
 }
 

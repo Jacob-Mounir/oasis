@@ -14,13 +14,19 @@ function Header() {
 
 
 			<div className='logo'>
-			<NavLink to="/"><img src={logo} /></NavLink>
+			<img src={logo} />
 			</div>
 
 
 
 			<div className='splash-menu'>
-				<p>menu</p>
+
+				<div className='link-container'>
+					<NavLink to="/">OASIS</NavLink>
+					<NavLink to="/edit">Edit</NavLink>
+					<NavLink to="/cart">Shopping Cart</NavLink>
+				</div>
+
 			</div>
 
 

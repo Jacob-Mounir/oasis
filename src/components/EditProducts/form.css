@@ -30,23 +30,25 @@
 .product-image {
     width: 30%;
     min-width: 200px;
-    max-width: 400px;
+    max-width: 300px;
 
 }
 
 .product-image > img{
    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
     border-radius: 1em;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 
 .product-info{
-    width: 100%
+    width: 100%;
 }
 
 .product-edit{
-    width: 15%
+    width: 15%;
 }
 
 

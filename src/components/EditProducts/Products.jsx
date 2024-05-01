@@ -39,7 +39,7 @@ const Products = () => {
 			) : error ? (
 				<p>{error}</p>
 			) : products.length > 0 ? (
-				products.map(product => <ViewProducts key={product.key} product={product} />)
+				products.map(product => <ViewProducts key={product.id} product={product} />)
 			) : (
 				<p>No products available.</p>
 			)}

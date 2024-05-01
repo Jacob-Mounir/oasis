@@ -17,7 +17,7 @@ const ViewProducts = ({ product }) => {
 		// 2. "fuska" - ta bort anställd från listan via Zustand
 
 		setIsLoading(true)
-		await deleteProduct(product.key)
+		await deleteProduct(product.id)
 		const productsFromDb = await getProducts()
 		setProducts(productsFromDb)
 		setIsLoading(false)

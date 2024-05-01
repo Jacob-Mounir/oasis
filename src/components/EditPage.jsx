@@ -1,9 +1,10 @@
 // import { useState } from 'react'
 import AddProduct from './EditProducts/AddProduct'
-import Products from './EditProducts/Products'
+import Products from './EditProducts/Products.jsx'
 import Header from './Header/Header.jsx'
+import { NavLink } from 'react-router-dom'
 
-function App() {
+function EditPage() {
 
 
 	return (
@@ -15,4 +16,4 @@ function App() {
 	)
 }
 
-export default App
+export default EditPage

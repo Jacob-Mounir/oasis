@@ -20,7 +20,7 @@ const EditProduct = ({ product, whenEditDone }) => {
 
 		setDisableButton(true)
 		const updatedProduct = { title, desc, imageURL, price }
-		await editProduct(product.key, updatedProduct)
+		await editProduct(product.id, updatedProduct)
 		const updatedList = await getProducts()
 		setProducts(updatedList)
 		whenEditDone()
@@ -47,7 +47,7 @@ const EditProduct = ({ product, whenEditDone }) => {
 
 					<input type="text"
 						value={desc}
-						className="bubble"
+						className="bubble"q
 						onChange={e => setDesc(e.target.value)}
 					/>
 

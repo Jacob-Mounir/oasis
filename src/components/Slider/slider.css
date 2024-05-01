@@ -1,0 +1,34 @@
+.slider-container{
+	width: 100%;
+	height: 30vw;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient( #0e66464e,#00000050),
+	url(./coral.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: var(--light)
+
+}
+
+
+.slider-text {
+width: 60%;
+
+}
+
+.slider-text h5{
+
+	font-size: 30px;
+
+}
+
+
+.slider-text h1{
+	font-size: 50px;
+
+
+}
