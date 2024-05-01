@@ -13,7 +13,7 @@ header{
 	width: 30%;
 	height: 30%;
 	z-index: 1000;
-	background-color: aquamarine;
+	background-color: #de9629;
 	clip-path: circle(50% at 100% 0);
 	transition: all 0.8s ease;
 	position: absolute;

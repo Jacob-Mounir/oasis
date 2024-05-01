@@ -18,7 +18,7 @@
 
 --font-color: #4A4A4A;
 --light: #f1f1f1;
---brown: #82735C;
+--brown: rgba(0, 0, 0, 0.658);
 --red: #6b0504;
 --green: #022002;
 --font: "lora", serif;
@@ -27,7 +27,7 @@
 
 button {
     padding: 1em 2.6em;
-    border: 0.1em solid #a9a9a9;
+    border: none;
     border-radius: 2em;
     background-color: var(--brown);
     color: var(--light);
