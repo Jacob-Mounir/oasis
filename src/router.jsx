@@ -6,6 +6,8 @@ import ShoppingCart from './components/ShoppingCart/ShoppingCart.jsx';
 import EditPage from './components/EditPage.jsx';
 import LandingPage from './components/LandingPage.jsx';
 LandingPage
+import Login from './components/Login/Login.jsx'; // Justera sökvägen efter behov
+
 // import NotFoundPage from './components/NotFoundPage.jsx';
 
 const router = createBrowserRouter([
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
 			{ path: "/edit",
 			element: <EditPage /> }
 		,
+
+		{ path: "/login", element: <Login /> },
 
 
 			{ path: "/",

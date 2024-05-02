@@ -1,52 +1,43 @@
 import { create } from 'zustand'
 
-const useStore = create((set) => ({
+const useStore = create((set, get) => ({
 	products: [],
-	cart: [],
+	cart: JSON.parse(localStorage.getItem('cart')) || [],  // Läser befintlig varukorg från localStorage
 
-	// Method to update products
+	isLoggedIn: false,
+	setIsLoggedIn: (loggedIn) => set({ isLoggedIn: loggedIn }),
+
 	setProducts: (newProducts) => set({ products: newProducts }),
 
-	// Add a product to the cart
 	addToCart: (product) => set((state) => {
-		console.log("Current cart before adding:", state.cart);
 		const cartItemIndex = state.cart.findIndex((item) => item.id === product.id);
-		const newCart = state.cart.slice(); // Always create a new array to avoid mutating state
+		const newCart = state.cart.slice();
 
 		if (cartItemIndex !== -1) {
-			// Product exists, increase quantity
 			newCart[cartItemIndex] = {
 				...newCart[cartItemIndex],
 				quantity: newCart[cartItemIndex].quantity + 1,
 			};
 		} else {
-			// Product does not exist, add new entry with quantity 1
 			newCart.push({ ...product, quantity: 1 });
 		}
 
-		console.log("Updated cart after adding:", newCart);
+		localStorage.setItem('cart', JSON.stringify(newCart));  // Sparar den uppdaterade varukorgen i localStorage
 		return { cart: newCart };
 	}),
 
-	// Remove a product from the cart
-	removeFromCart: (productId) => set((state) => ({
-		cart: state.cart.filter((item) => item.id !== productId)
-	})),
-
-	// Decrease the quantity of a product in the cart
 	decreaseQuantity: (productId) => set((state) => {
 		const newCart = state.cart.map((item) => {
-			if (item.id === productId && item.quantity > 1) {
+			if (item.id === productId && item.quantity > 0) {
 				return { ...item, quantity: item.quantity - 1 };
 			}
 			return item;
-		});
+		}).filter(item => item.quantity > 0);  // Filtrera bort objekt med kvantitet 0
 
-		// Optionally remove item from cart if quantity is 0
-		return {
-			cart: newCart.filter((item) => item.quantity > 0),
-		};
+		localStorage.setItem('cart', JSON.stringify(newCart));
+		return { cart: newCart };
 	}),
+
 }));
 
 export { useStore }

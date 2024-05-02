@@ -2,8 +2,30 @@
 
 .shopSection{
 	width: 100%;
+
 }
 
+.searchSection{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.search-bar{
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+
+.searchSection  > input[type=text]{
+  background-color: var(--light);
+  border: none;
+  text-decoration: underline;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 .sorting-controls{
   font-family: 'Courier New', Courier, monospace;

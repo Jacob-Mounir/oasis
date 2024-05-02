@@ -60,6 +60,20 @@ const ShopGrid = () => {
 	return (
 		<>
 			<section className="shopSection">
+
+			<div className='searchSection'>
+
+		
+					<input
+						className="search-bar"
+						type="text"
+						placeholder="Search products..."
+						value={searchQuery}
+						onChange={handleSearchChange}
+
+					/>
+
+
 				<div className="sorting-controls">
 					<span onClick={toggleSortField}>Sort by <span className='order-name'>{sortField.charAt(0).toUpperCase() + sortField.slice(1)}</span> </span>
 					<span className={sortOrder === 'ascending' ? 'sort-arrow active' : 'sort-arrow inactive'} onClick={() => setSortOrder('ascending')}>
@@ -69,13 +83,10 @@ const ShopGrid = () => {
 						▼
 					</span>
 				</div>
-				<input
-					type="text"
-					placeholder="Search products..."
-					value={searchQuery}
-					onChange={handleSearchChange}
-					className="search-bar"
-				/>
+
+			</div>
+
+
 				{loading ? (
 					<p>Loading products...</p>
 				) : error ? (
