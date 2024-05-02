@@ -2,7 +2,7 @@
 import { createBrowserRouter, Route } from 'react-router-dom';
 import Root from './components/Root.jsx';
 
-import ShoppingCart from './components/ShoppingCart/ShoppingCart.jsx';
+import Cart from './components/ShoppingCart/Cart.jsx';
 import EditPage from './components/EditPage.jsx';
 import LandingPage from './components/LandingPage.jsx';
 LandingPage
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
 		children: [
 
 			{ path: "/cart",
-			element: <ShoppingCart /> }
+			element: <Cart /> }
 		,
 			{ path: "/edit",
 			element: <EditPage /> }

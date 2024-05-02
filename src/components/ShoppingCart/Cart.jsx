@@ -3,7 +3,7 @@ import { useStore } from '../../data/store.js';
 import { NavLink } from 'react-router-dom';
 import Header from '../Header/Header.jsx';
 
-const ShoppingCart = () => {
+const Cart = () => {
 	const { cart, addToCart, removeFromCart, decreaseQuantity } = useStore(state => ({
 		cart: state.cart,
 		addToCart: state.addToCart,
@@ -47,4 +47,4 @@ const ShoppingCart = () => {
 };
 
 
-export default ShoppingCart;
+export default Cart;
